@@ -1,0 +1,10 @@
+---
+ - name: running shel script
+   script: "/tmp/testscript1.sh {{ testvar }}"
+
+ - name: running a command on remote host
+   shell: touch myfilecreated2
+   args:
+     chdir: /home/vagrant
+# - name: running a command on remote host
+#   shell: "ssh vagrant@{{ myhost }} 'cd /home/vagrant; touch myfilecreated'"
